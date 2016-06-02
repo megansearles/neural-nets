@@ -16,14 +16,8 @@ class Network :
         self.size = len(layers)
         self.layers = tuple(layers)
 
-        self.weights = []
-        self.biases = []
-
-        for r in layers[1:] :
-            self.biases.append(np.rand.randn(r, 1))
-
-        for r, c in zip(layers[:-1], layers[1:]) :
-            self.weights(np.rand.randn(r,c))
+        self.weights = np.random.randn(m,n) for m, n in zip(layers[1:], layers[:-1])
+        self.biases = np.random.randn(n, 1) for n in layers[1:]
 
     #def __init__(self) :
 
