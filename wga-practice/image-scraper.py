@@ -2,12 +2,12 @@ import os
 import csv
 import urllib
 
-#print os.listdir("../..")
+new_catalog = []
 
 with open('wga-sample.txt', 'rb') as f:
 	r = csv.reader(f, delimiter=';')
 	r.next()
-	os.chdir("Art/a/aachen")
+	os.chdir("Art/a/aachen") # Don't forget to make these folders before running this on the actual catalog
 	for row in r:
 		
 		# Change url in file to url with just the picture
@@ -18,8 +18,8 @@ with open('wga-sample.txt', 'rb') as f:
 		# Stores list of components of url, along with specifics needed for saving images
 		url_comp = url2.split('/')
 		title = url_comp[-1]
-		artist = url_comp[-2]
-		letter = url_comp[-3]
+		letter = url_comp[4]
+		artist = url_comp[5]
 		
 		# Saves lists of directories for artists and letters
 		a_dir = os.listdir("..")
@@ -40,5 +40,16 @@ with open('wga-sample.txt', 'rb') as f:
 			os.mkdir(artist)
 			os.chdir(artist)
 			urllib.urlretrieve(url2,title)
-		# Something wrong in above code that made it so that the first "b"
-		# artist's folder was saved in the letter directory instead of "b"
+		
+		# Update row to include file path instead of url and add onto a running list of all the rows
+		new_path = "Art" + "/" + letter + "/" + artist + "/" + title # (this may not be the desired format - check)
+		row[6] = new_path
+		new_catalog.append(row)
+		
+# Make a new catalog text file with the file path of the image instead of the url
+with open('../../../updated-sample.txt', 'wb') as f:
+	w = csv.writer(f, delimiter=';')
+	for row in new_catalog:
+		w.writerow(row)
+		
+# ASK FOR HELP ON GETTING IT TO PICK UP WHERE IT LEFT OFF IF IT GETS PAUSED
