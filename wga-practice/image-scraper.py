@@ -8,7 +8,7 @@ with open('wga-sample.txt', 'rb') as f:
 	r = csv.reader(f, delimiter=';')
 	r.next()
 	os.chdir("Art/a/aachen") # Don't forget to make these folders before running this on the actual catalog
-	for row in r:
+	for row in r :
 		
 		# Change url in file to url with just the picture
 		url1 = row[6]
@@ -46,10 +46,15 @@ with open('wga-sample.txt', 'rb') as f:
 		row[6] = new_path
 		new_catalog.append(row)
 		
+		# Update the new catalog file
+		with open('../../../updated-sample.txt', 'ab') as f:
+			w = csv.writer(f, delimiter=';')
+			w.writerow(row)
+			
+		pickup_place = len(new_catalog) - 1
+		
 # Make a new catalog text file with the file path of the image instead of the url
-with open('../../../updated-sample.txt', 'wb') as f:
+'''with open('../../../updated-sample.txt', 'ab') as f:
 	w = csv.writer(f, delimiter=';')
 	for row in new_catalog:
-		w.writerow(row)
-		
-# ASK FOR HELP ON GETTING IT TO PICK UP WHERE IT LEFT OFF IF IT GETS PAUSED
+		w.writerow(row)'''
