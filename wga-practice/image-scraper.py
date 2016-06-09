@@ -51,10 +51,7 @@ with open('wga-sample.txt', 'rb') as f:
 			w = csv.writer(f, delimiter=';')
 			w.writerow(row)
 			
-		pickup_place = len(new_catalog) - 1
-		
-# Make a new catalog text file with the file path of the image instead of the url
-'''with open('../../../updated-sample.txt', 'ab') as f:
-	w = csv.writer(f, delimiter=';')
-	for row in new_catalog:
-		w.writerow(row)'''
+		# Update file with the next row number to pick up on
+		pickup_place = len(new_catalog)
+		with open('../../../pickup-place.txt', 'wb') as f:
+			f.write(str(pickup_place))
