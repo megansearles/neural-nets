@@ -1,13 +1,36 @@
+''' To-Do Before Running the Program the First Time:
+		1. Create file "pickup-place.txt" which only contains the number 0
+		2. Create folders "Art/a/aachen"
+		3. Change "wga-sample.txt" to "catalog.txt"
+'''
+
+# Last problem: Saving the first picture in aachen's folder instead of where it should be when start with a. 
+# When I do balen, it saves it in the a folder. When I do the second balen, the first stays in its right folder,
+# but the second is saved in a different balen folder in the a folder.
+
 import os
 import csv
 import urllib
 
 new_catalog = []
+pickup_place = len(new_catalog)
+
+# If program had stopped previously, this will allow it to start where it left off
+with open('pickup-place.txt', 'rb') as f:
+	pickup_place = f.read()
+
+old_place = pickup_place
 
 with open('wga-sample.txt', 'rb') as f:
 	r = csv.reader(f, delimiter=';')
 	r.next()
-	os.chdir("Art/a/aachen") # Don't forget to make these folders before running this on the actual catalog
+	os.chdir("Art/a/aachen")
+	
+	# Skip to next line
+	if pickup_place != 0:
+		for n in xrange(int(pickup_place)):
+			r.next()
+	
 	for row in r :
 		
 		# Change url in file to url with just the picture
@@ -27,10 +50,13 @@ with open('wga-sample.txt', 'rb') as f:
 		
 		# Change directory to letter and artist folder and save image
 		if artist == a_dir[-1]:
+			os.chdir("../" + artist)
 			urllib.urlretrieve(url2,title)
 		elif letter == l_dir[-1]:
-			os.chdir("..")
-			os.mkdir(artist)
+			os.chdir("../../" + letter)
+			a_dir = os.listdir(".")
+			if artist not in a_dir:
+				os.mkdir(artist)
 			os.chdir(artist)
 			urllib.urlretrieve(url2,title)
 		else:
@@ -42,7 +68,7 @@ with open('wga-sample.txt', 'rb') as f:
 			urllib.urlretrieve(url2,title)
 		
 		# Update row to include file path instead of url and add onto a running list of all the rows
-		new_path = "Art" + "/" + letter + "/" + artist + "/" + title # (this may not be the desired format - check)
+		new_path = "Art" + "/" + letter + "/" + artist + "/" + title
 		row[6] = new_path
 		new_catalog.append(row)
 		
@@ -52,6 +78,6 @@ with open('wga-sample.txt', 'rb') as f:
 			w.writerow(row)
 			
 		# Update file with the next row number to pick up on
-		pickup_place = len(new_catalog)
+		pickup_place = len(new_catalog) + int(old_place)
 		with open('../../../pickup-place.txt', 'wb') as f:
 			f.write(str(pickup_place))
