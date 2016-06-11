@@ -4,10 +4,6 @@
 		3. Change "wga-sample.txt" to "catalog.txt"
 '''
 
-# Last problem: Saving the first picture in aachen's folder instead of where it should be when start with a. 
-# When I do balen, it saves it in the a folder. When I do the second balen, the first stays in its right folder,
-# but the second is saved in a different balen folder in the a folder.
-
 import os
 import csv
 import urllib
