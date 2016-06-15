@@ -1,0 +1,14 @@
+AUTHOR;BORN-DIED;TITLE;DATE;TECHNIQUE;LOCATION;URL;FORM;TYPE;SCHOOL;TIMEFRAME
+AACHEN, Hans von;(b. 1552, K<F6>ln, d. 1615, Praha);Allegory;1598;Oil on copper, 56 x 47 cm;Alte Pinakothek, Munich;http://www.wga.hu/html/a/aachen/allegory.html;painting;mythological;German;1601-1650
+AACHEN, Hans von;(b. 1552, K<F6>ln, d. 1615, Praha);Bacchus, Ceres and Cupid;-;Oil on canvas, 163 x 113 cm;Kunsthistorisches Museum, Vienna;http://www.wga.hu/html/a/aachen/bacchus.html;painting;mythological;German;1601-1650
+AACHEN, Hans von;(b. 1552, K<F6>ln, d. 1615, Praha);Joking Couple;-;Copperplate, 25 x 20 cm;Kunsthistorisches Museum, Vienna;http://www.wga.hu/html/a/aachen/j_couple.html;painting;genre;German;1601-1650
+AACHEN, Hans von;(b. 1552, K<F6>ln, d. 1615, Praha);Portrait of Emperor Rudolf II;1590s;Oil on canvas, 60 x 48 cm;Kunsthistorisches Museum, Vienna;http://www.wga.hu/html/a/aachen/rudolf2.html;painting;portrait;German;1601-1650
+AACHEN, Hans von;(b. 1552, K<F6>ln, d. 1615, Praha);Self-Portrait with a Glass of Wine;c. 1596;Oil on canvas, 53 x 44 cm;Private collection;http://www.wga.hu/html/a/aachen/selfport.html;painting;portrait;German;1601-1650
+AAGAARD, Carl Frederik;(b. 1833, Odense, d. 1895, K?benhavn);Deer beside a Lake;1888;Oil on canvas, 53 x 82 cm;Private collection;http://www.wga.hu/html/a/aagaard/deerlake.html;painting;landscape;Danish;1851-1900
+AAGAARD, Carl Frederik;(b. 1833, Odense, d. 1895, K?benhavn);The Rose Garden;1877;Oil on canvas, 98 x 80 cm;Private collection;http://www.wga.hu/html/a/aagaard/rosegard.html;painting;landscape;Danish;1851-1900
+ABADIA, Juan de la;(active 1470-1490 in Huesca);The Archangel Michael;c. 1490;Wood, 127 x 78 cm;Museu Nacional d'Art de Catalunya, Barcelona;http://www.wga.hu/html/a/abadia/michael.html;painting;religious;Spanish;1451-1500
+ABAQUESNE, Mass<E9>ot;(b. ca 1500, Cherbourg, d. 1564, Sotteville-l?s-Rouen);Albarello;c. 1545;Maiolica;Mus<E9>e des Beaux-Arts, Rouen;http://www.wga.hu/html/a/abaquesn/albarell.html;ceramics;other;French;1501-1550
+ABAQUESNE, Mass<E9>ot;(b. ca 1500, Cherbourg, d. 1564, Sotteville-l?s-Rouen);Ceramic Floor;1542;Ceramics;Mus<E9>e National de la Renaissance, <C9>couen;http://www.wga.hu/html/a/abaquesn/floor1.html;ceramics;other;French;1501-1550
+BALDUNG GRIEN, Hans;(b. 1484/85, Schw<E4>bisch-Gm<FC>nd, d. 1545, Strasbourg);Portrait of Caspar Hedio;1543;Woodcut, 175 x 138 mm;Staatliche Museen, Berlin;http://www.wga.hu/html/b/baldung/4/5hedio.html;graphics;portrait;German;1501-1550
+BALEN, Hendrick van;(b. 1575, Antwerpen, d. 1632, Antwerpen);Allegory of Abundance;c. 1615;Oil on panel, 66 x 93 cm;Private collection;http://www.wga.hu/html/b/balen/allegory.html;painting;mythological;Flemish;1601-1650
+BALEN, Hendrick van;(b. 1575, Antwerpen, d. 1632, Antwerpen);Minerva and the Nine Muses;-;Oil on panel, 78 x 108 cm;Private collection;http://www.wga.hu/html/b/balen/apollo.html;painting;mythological;Flemish;1601-1650
