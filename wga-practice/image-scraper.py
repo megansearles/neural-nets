@@ -57,9 +57,11 @@ with open('wga-sample.txt', 'rb') as f:
 			urllib.urlretrieve(url2,title)
 		else:
 			os.chdir("../..")
-			os.mkdir(letter)
+			if not os.path.exists(letter):
+				os.mkdir(letter)
 			os.chdir(letter)
-			os.mkdir(artist)
+			if not os.path.exists(artist):
+				os.mkdir(artist)
 			os.chdir(artist)
 			urllib.urlretrieve(url2,title)
 		
